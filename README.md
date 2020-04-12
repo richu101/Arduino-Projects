@@ -15,6 +15,7 @@ In this repo i wish to some arduino tutorial or guide for beginners and Experts
 
 ## Guide 3
 ### quick start to arduino cli a command line arduino ide. much faster and light weight arduino programmer
+* Arduino cli
 
 ` https://www.hackster.io/B45i/getting-started-with-arduino-cli-7652a5 `
 
