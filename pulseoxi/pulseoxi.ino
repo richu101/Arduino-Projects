@@ -97,19 +97,10 @@ void loop()
       particleSensor.nextSample(); //We're finished with this sample so move to next sample
  
       //send samples and calculation result to terminal program through UART
-    uint32_t val = 0 ;
     if(spo2 > 85 && spo2 < 101)
     {
       if(heartRate > 64 && heartRate < 135)
       {
-          val = validHeartRate * 1000;
-          val += heartRate * 1000;
-          val += validSPO2
-      }
-      if (Serial.available() > 0)
-    {
-    Serial.print(val);
-    }/*
       Serial.print(validHeartRate, DEC);
       Serial.print(("-"));
       Serial.print(heartRate, DEC);
@@ -117,10 +108,8 @@ void loop()
       Serial.print(validSPO2, DEC);
       Serial.print(("-"));
       Serial.println(spo2, DEC);
-
- */
     }
- 
+    }
     //After gathering 25 new samples recalculate HR and SP02
     maxim_heart_rate_and_oxygen_saturation(irBuffer, bufferLength, redBuffer, &spo2, &validSPO2, &heartRate, &validHeartRate);
   }
