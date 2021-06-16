@@ -114,3 +114,4 @@ void loop()
     maxim_heart_rate_and_oxygen_saturation(irBuffer, bufferLength, redBuffer, &spo2, &validSPO2, &heartRate, &validHeartRate);
   }
 }
+// test code
