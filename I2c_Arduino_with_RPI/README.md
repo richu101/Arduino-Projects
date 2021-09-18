@@ -31,7 +31,7 @@
 
 # WARNING
 
-DONT make the ATMEGA328 as maste and RPI as slave without a logic converter
+DONT make the ATMEGA328 as maste and RPI as slave without a logic converter of 3.3v to 5v
 
 RPI is 3.3v logic and  ATMEGA328 is 5v logic 
 
