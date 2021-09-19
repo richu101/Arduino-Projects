@@ -1,6 +1,6 @@
 from smbus import SMBus
 
-addr = 0x8 # BUS assr
+addr = 0x8 # BUS addr
 bus = SMBus(1) # Select i2c one in rpi
 numb = 1
 
