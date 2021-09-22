@@ -21,7 +21,11 @@ while True:
     var = int(input(">>> "))
     if not var:
         continue
+    
     writeNumber(var)
     number = readNumber()
-    print("received number = ",number)
+    if number == 17:  # when the clock is streched the function bus.read_byte() function will return
+        continue
+    else:
+        print("received number = ",number)
     
