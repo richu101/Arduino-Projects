@@ -23,7 +23,7 @@ import time
 bus = smbus.SMBus(1)
 
 # This is the address we setup in the Arduino Program
-address = 0x04
+address = 0x08
 
 def writeNumber(value):
     bus.write_byte(address, value)
@@ -36,8 +36,10 @@ def readNumber():
     return number
 
 while True:
-    var = input("")
+    var = int(input(">>> "))
     if not var:
         continue
     writeNumber(var)
     number = readNumber()
+    print("received number = ",number)
+    
