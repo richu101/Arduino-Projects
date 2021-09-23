@@ -1,4 +1,3 @@
-
 import smbus
 import time
 # for RPI version 1, use "bus = smbus.SMBus(0)"
@@ -21,11 +20,7 @@ while True:
     var = int(input(">>> "))
     if not var:
         continue
-    
     writeNumber(var)
     number = readNumber()
-    if number == 17:  # when the clock is streched the function bus.read_byte() function will return
-        continue
-    else:
-        print("received number = ",number)
+    print("received number = ",number)
     
