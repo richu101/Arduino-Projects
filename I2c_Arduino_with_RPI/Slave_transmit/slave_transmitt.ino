@@ -47,11 +47,13 @@ void receiveData(int byteCount){
 void sendData(){
     bool  buttonState = digitalRead(buttonPin);
 
-  if (buttonState == HIGH) {
+  if (buttonState == LOW) {
         
         TWCR |= (1<<TWEA); // set not acknowledge condition
-        
-      
+    
+  }
+  else{
+      TWCR |= (0<<TWEA); // set not acknowledge condition
   }
     Wire.write(TCNT0);
 }
