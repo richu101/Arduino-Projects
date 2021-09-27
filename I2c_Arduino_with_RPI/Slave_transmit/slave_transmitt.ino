@@ -53,7 +53,7 @@ void sendData(){
     
   }
   else{
-      TWCR &= (0<<TWEA); // set not acknowledge condition
+      TWCR &= ~(1<<TWEA); // set not acknowledge condition
   }
     Wire.write(TCNT0);
 }
