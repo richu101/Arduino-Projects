@@ -11,7 +11,7 @@ void loop() {
   Wire.requestFrom(8,1);
   delay(10);
    byte MasterReceive = Wire.read();
-   if(MasterReceive != 255){
+   if(MasterReceive != 255){ // TWI comminication in arduino is active low 
     Serial.println(MasterReceive);
    }
     
