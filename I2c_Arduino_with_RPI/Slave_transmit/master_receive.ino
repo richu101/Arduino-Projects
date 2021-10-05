@@ -14,6 +14,9 @@ void loop() {
    if(MasterReceive != 255){ // TWI comminication in arduino is active low 
     Serial.println(MasterReceive);
    }
+   else {
+     
+   }
     
    
 }
