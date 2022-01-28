@@ -12,24 +12,35 @@
 
 #include <Wire.h>
 
-void setup() {
-  Wire.begin(0x08);                // join i2c bus with address #8
-  Wire.onReceive(receiveEvent); // register event
-  Serial.begin(9600);           // start serial for output
+void setup() 
+{
+  
+  Wire.begin(0x08);                 // join i2c bus with address #8
+  Wire.onReceive(receiveEvent);    // register event
+  pinMode(LED_BUILTIN,OUTPUT);
+  Serial.begin(9600);             // start serial for output
+
 }
 
 void loop() {
+  digitalWrite(LED_BUILTIN,LOW);
   delay(100);
-}
+} 
 
-// function that executes whenever data is received from master
-// this function is registered as an event, see setup()
+
+
+
+
+
 void receiveEvent(int howMany) 
 {
-  while (1 < Wire.available()) { // loop through all but the last
-    char c = Wire.read(); // receive byte as a character
+  Serial.println("Receive event");
+  digitalWrite(LED_BUILTIN,HIGH);
+  while (Wire.available()>0) { // loop through all but the last
+    int c = Wire.read(); // receive byte as a character
     Serial.print(c);         // print the character
+    Serial.print("");
   }
-  int x = Wire.read();    // receive byte as an integer
-  Serial.println(x);         // print the integer
+  // int x = Wire.read();    // receive byte as an integer
+  // Serial.println(x);         // print the integer
 }
