@@ -40,7 +40,7 @@ void receiveEvent(int howMany)
     int c = Wire.read(); // receive byte as a character
     Serial.print(c);         // print the character
     Serial.print("");
-  }
+}
   // int x = Wire.read();    // receive byte as an integer
   // Serial.println(x);         // print the integer
 }
