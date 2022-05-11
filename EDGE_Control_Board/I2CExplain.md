@@ -54,4 +54,4 @@ After a wire.read() function the return value of the Wire.availabel() function w
 ```
  This function will return a single Byte of data from the I2c bus
 ```
-**Example:**  If We send " Hello " through I2C then the wire.read function will return H . In the next call it will return o
+**Example:**  If We send " Hello " through I2C then the wire.read function will return H . In the next call it will return 
