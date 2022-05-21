@@ -1,6 +1,6 @@
 # **Wireless  Transceiver Using  NRF24L01**
 
-<img src="transeaver">
+![](transeaver.jpg)
 
 ## **Introduction**
 
@@ -22,18 +22,18 @@ The module works through SPI communication. And, can be interfaced with any micr
 
 * It uses the SPI communication protocol.
 
-<img src="pintable">
+![](COnnectionTable.jpg)
 
 
 ## **Circuit Diagram**
 
-<img src="TXCircuit">
+<img src="TXCircuit.jpg">
 
-<img src="RXCircuit">
+<img src="RXCircuit.jpg">
 
 ## **Connection Table**
 
-<img src="COnnectionTable">
+<img src="COnnectionTable.jpg">
 
 
 ## **Arduino Code**
