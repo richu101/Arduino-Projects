@@ -21,6 +21,7 @@ void setup() {
   pinMode(ECHOPIN, INPUT);
   pinMode(buttonpin, INPUT_PULLUP);
   pinMode(TRIGPIN, OUTPUT);
+  pinMode(13,OUTPUT);
   myservo.attach(9);
 }
  
@@ -28,23 +29,20 @@ void loop() {
 
  bstate = digitalRead(buttonpin);
   delay(10);
-if(bstate != blaststate)
-{
-  blaststate = bstate;
-  if(blaststate == LOW)bst=1;
+
+  if(bstate == LOW)bst=1;
   else bst= 0;
-  Serial.print("Switch is preseed");
-}
+  
 
 if(bst==1)
 {
- 
+ digitalWrite(13,HIGH);
 if(distancestate == 0 && getdistance()<=10)
 {
 
   myservo.write(0);
   Serial.println("Drop");
-  delay(1000);
+  delay(5000);
   myservo.write(180);
   distancestate = 1;
 }
@@ -58,8 +56,9 @@ if(distancestate == 1 && getdistance()>20)
 }
 if(bst == 0)
 {
-  myservo.write(180);
+  myservo.write(0);
   Serial.println("Open");
+  digitalWrite(13,LOW);
 }
 }
 
